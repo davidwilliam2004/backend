@@ -1,0 +1,29 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "The ARV-GPT backend is used to handle the API, they have the endpoints for signup ,login and chating with AI, they have the logic behind where the translation and Groq API to fetch the AI LLM (Lama model)."
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+license = {text = "n"}
+readme = "README.md"
+requires-python = ">=3.10"
+package-mode = false 
+dependencies = [
+    "django (>=5.2,<6.0)",
+    "djangorestframework (>=3.16.0,<4.0.0)",
+    "django-cors-headers (>=4.7.0,<5.0.0)",
+    "groq (>=0.22.0,<0.23.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "uuid (>=1.30,<2.0)",
+    "gtts (>=2.5.4,<3.0.0)"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+uuid = "^1.30"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

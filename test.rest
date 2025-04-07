@@ -1,0 +1,35 @@
+POST http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{ "username": "flet", "password": "1234"}
+
+###
+POST http://127.0.0.1:8000/api/signup/
+Content-Type: application/json
+
+{ "username": "flet", "password": "1234", "email": "flet@mail.com" }
+
+###
+GET http://127.0.0.1:8000/test-token/
+Authorization: Token c9ce178f211c8e036649002ab6d2e52a90d6300f
+
+###
+POST http://127.0.0.1:8000/api/chat_ai/
+Authorization: Token e3f1616ce1fc63e95edee5c8ca1fa1a712adebef
+Content-Type: application/json
+
+{
+    "message": "big temple tanjore",
+    "language":"en"
+}
+###
+POST https://api.groq.com/openai/v1/chat/completions
+Authorization: Bearer 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
+Content-Type: application/json
+
+{
+    "model": "llama-3.1-8b-instant",
+    "messages": [
+        {"role": "user", "content": "Explain the importance of fast language models"}
+    ]
+}
